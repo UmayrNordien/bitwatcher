@@ -27,7 +27,7 @@
 
         <!--search-->
         <div class="col-md-12 mb-5">
-          <input type="text" list="search-terms" name="search" placeholder="Search...">
+          <input type="text" list="search-terms" name="search" placeholder="Search..." v-model="search">
           <datalist id="search-terms">
             <option value="twitter"></option>
             <option value="spacex"></option>
