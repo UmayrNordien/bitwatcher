@@ -4,19 +4,18 @@
     <div class="landing container-fluid d-flex align-items-center justify-content-center">
       <div class="row">
         <div class="col-md-6 mt-5 col-sm-12">
-          <h1 style="color: #ffffff">Welcome <span>Bit</span> Watcher</h1>
+          <h1 style="color: #ffffff">Welcome to <span>Bit</span> Watcher</h1>
           <div class="eye">
             <div class="up"></div>
             <div class="mid"></div>
             <div class="down"></div>
           </div>
-          <h2 class="text-white">Lorem</h2>
-          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non magna non tortor
-            gravida hendrerit. Nulla facilisi.</p>
-          <button class="btn btn-outline-warning">Catch Up</button>
+          <h2 class="text-white"><i class="bi bi-eye"></i></h2>
+          <p class="text-white">Bit Watcher is a startup news site that provides comprehensive coverage of the latest news and developments in the world of Bitcoin, business, and general interest stories.</p>
+          <button class="btn btn-outline-warning">Catch Up <i class="bi bi-arrow-down-circle"></i></button>
         </div>
         <div class="col-md-6 col-sm-12 text-center">
-          <img src="https://i.postimg.cc/cL5Y8XH0/izzy-gerosa-xni-TNHp4-UVE-unsplash-removebg-preview.png" width="500px"
+          <img id="watcher" src="https://i.postimg.cc/Zq9wWrzs/fotor-2023-4-23-22-33-51.png" width="500px"
             height="350px" alt="Image" class="img-fluid">
         </div>
       </div>
@@ -48,7 +47,7 @@
                 <span class="card_subtitle">{{ item.description }}</span>
                 <p class="card_description">Author : {{ item.author }}</p>
                 <p class="card_description">{{ item.publishedAt }}</p>
-                <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More</a>
+                <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More <i class="bi bi-book"></i></a>
                 <ThumbsUp></ThumbsUp>
               </div>
             </div>
@@ -108,6 +107,24 @@ export default {
 </script>
 
 <style scoped>
+#watcher{
+  /* border: #ffffff 2px solid; */
+  /* border-radius: 20px; */
+}
+
+#watcher {
+  border-radius: 20px;
+  max-width: 90%;
+  height: auto;
+  margin-top: 0;
+}
+
+@media (max-width: 767.98px) {
+  #watcher {
+    margin-top: 120px;
+  }
+}
+
 span {
   color: #f9c317;
 }
@@ -138,6 +155,8 @@ span {
   background: repeating-linear-gradient(45deg, #f9c317, #f9c317 12.5px, #252525 12.5px, #252525 62.5px);
   overflow: hidden;
   border-radius: 20px;
+  border: #f9c317 1.8px solid;
+  --bs-card-border-color: none !important;
 }
 
 .temporary_text {

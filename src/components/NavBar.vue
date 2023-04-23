@@ -11,16 +11,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link to="/" class="nav-link">Home</router-link>
+              <router-link to="/" class="nav-link"><i class="bi bi-house"></i> Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/wsj-articles" class="nav-link">Bitcoin</router-link>
+              <router-link to="/" class="nav-link"><i class="bi bi-currency-bitcoin"></i> Bitcoin</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/business" class="nav-link">Business</router-link>
+              <router-link to="/business" class="nav-link"><i class="bi bi-briefcase"></i> Business</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/tech-crunch-articles" class="nav-link">General</router-link>
+              <router-link to="/general" class="nav-link"><i class="bi bi-globe"></i> General</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="/contact" class="nav-link"><i class="bi bi-phone"></i> Contact</router-link>
             </li>
           </ul>
           <!-- <form class="d-flex">
@@ -51,5 +54,9 @@ export default {
 <style scoped>
 span {
     color: #f9c317;
+}
+
+nav {
+  background-color: #1f1f1f !important;
 }
 </style>

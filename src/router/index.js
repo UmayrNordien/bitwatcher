@@ -14,34 +14,20 @@ const routes = [
       return import('../views/BusinessView.vue')
     }
   },
-// {
-//   path: '/tech-crunch-articles',
-//   name: 'tech-crunch-articles',
-//   component: function(){
-//     return import('../views/TechCrunchArticlesView.vue')
-//   }
-// },
-// {
-//   path: '/us-business-articles',
-//   name: 'us-business-articles',
-//   component: function(){
-//     return import('../views/USBusinessArticlesView.vue')
-//   }
-// },
-// {
-//   path: '/tesla-articles',
-//   name: 'tesla-articles',
-//   component: function(){
-//     return import('../views/TeslaArticleView.vue')
-//   }
-// },
-// {
-//   path: '/apple-articles',
-//   name: 'apple-articles',
-//   component: function(){
-//     return import('../views/AppleView.vue')
-//   }
-// }
+  {
+    path: '/general',
+    name: 'general',
+    component: function () {
+      return import('../views/GeneralView.vue')
+    }
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: function () {
+      return import('../views/ContactView.vue')
+    }
+  },
 ]
 
 const router = createRouter({
