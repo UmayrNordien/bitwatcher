@@ -1,17 +1,18 @@
 <template>
-    <!--search-->
-    <div class="col-md-12 mb-5">
-      <input type="text" list="search-terms" name="search" placeholder="Search..." v-model="search">
-      <datalist id="search-terms">
-        <option value="twitter"></option>
-        <option value="spacex"></option>
-        <option value="tesla"></option>
-      </datalist>
-    </div>
-  
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredUSBusiness" :key="item">
+  <!--search-->
+  <div class="col-md-12 mb-5">
+    <input type="text" list="search-terms" name="search" placeholder="Search..." v-model="search">
+    <datalist id="search-terms">
+      <option value="twitter"></option>
+      <option value="spacex"></option>
+      <option value="tesla"></option>
+    </datalist>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredallNews" :key="item">
+        <template v-if="item.urlToImage">
           <article class="card">
             <div class="temporary_text">
               <img :src="item.urlToImage" :alt="item.title" class="news-image">          
@@ -23,45 +24,56 @@
                 <p class="card_description">Author : {{ item.author }}</p>
                 <p class="card_description">{{ item.publishedAt }}</p>
                 <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More</a>
+                <ThumbsUp></ThumbsUp>
               </div>
             </div>
           </article>
-        </div>
+        </template>
+        <template v-else>
+          <CoinC></CoinC>
+        </template>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import { mapGetters, mapActions } from 'vuex';
-  
-  export default {
-    data() {
-      return {
-        search: ""
-      }
-    },
-    computed: {
-      ...mapGetters(["USBusiness"]),
-  
-      filteredUSBusiness() {
-        if (this.USBusiness) {
-          return this.USBusiness.filter((item) => {
-            return item.title.toLowerCase().includes(this.search.toLowerCase());
-          });
-        } else {
-          return [];
-        }
-      }
-    },
-  
-    methods: {
-      ...mapActions(["fetchUSBusiness"])
-    },
-    async created() {
-      this.fetchUSBusiness()
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapActions } from 'vuex';
+import ThumbsUp from './ThumbsUp.vue';
+import CoinC from './CoinC.vue';
+
+export default {
+  components: {
+    ThumbsUp,
+    CoinC
+  },
+  data() {
+    return {
+      search: ""
     }
+  },
+  computed: {
+    ...mapGetters(["allNews"]),
+
+    filteredallNews() {
+      if (this.allNews) {
+        return this.allNews.filter((item) => {
+          return item.title.toLowerCase().includes(this.search.toLowerCase());
+        });
+      } else {
+        return [];
+      }
+    }
+  },
+
+  methods: {
+    ...mapActions(["fetchAllNews"])
+  },
+  async created() {
+    this.fetchAllNews()
   }
-  </script>
+}
+</script>
   
   
   <style scoped>

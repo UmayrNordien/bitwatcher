@@ -11,12 +11,13 @@
             <div class="down"></div>
           </div>
           <h2 class="text-white"><i class="bi bi-eye"></i></h2>
-          <p class="text-white">Bit Watcher is a startup news site that provides comprehensive coverage of the latest news and developments in the world of Bitcoin, business, and general interest stories.</p>
+          <p class="text-white">Bit Watcher is a startup news site that provides comprehensive coverage of the latest news
+            and developments in the world of Bitcoin, business, and general interest stories.</p>
           <button class="btn btn-outline-warning">Catch Up <i class="bi bi-arrow-down-circle"></i></button>
         </div>
         <div class="col-md-6 col-sm-12 text-center">
-          <img id="watcher" src="https://i.postimg.cc/Zq9wWrzs/fotor-2023-4-23-22-33-51.png" width="500px"
-            height="350px" alt="Image" class="img-fluid">
+          <img id="watcher" src="https://i.postimg.cc/Zq9wWrzs/fotor-2023-4-23-22-33-51.png" width="500px" height="350px"
+            alt="Image" class="img-fluid">
         </div>
       </div>
     </div>
@@ -36,18 +37,20 @@
 
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredTechCrunch" :key="item">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredbitcoinNews" :key="item">
           <article class="card">
-            <div class="temporary_text">
+            <div class="temporary_text" v-if="item.urlToImage">
               <img :src="item.urlToImage" :alt="item.title" class="news-image">
             </div>
+            <CoinC v-else></CoinC>
             <div class="card_wrapper">
               <div class="card_content">
                 <span class="card_title">{{ item.title }}</span>
                 <span class="card_subtitle">{{ item.description }}</span>
                 <p class="card_description">Author : {{ item.author }}</p>
                 <p class="card_description">{{ item.publishedAt }}</p>
-                <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More <i class="bi bi-book"></i></a>
+                <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More <i
+                    class="bi bi-book"></i></a>
                 <ThumbsUp></ThumbsUp>
               </div>
             </div>
@@ -55,7 +58,6 @@
         </div>
       </div>
     </div>
-
     <FooterC></FooterC>
   </div>
 </template>
@@ -66,6 +68,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 import FooterC from '@/components/FooterC.vue'
 import ThumbsUp from './ThumbsUp.vue';
+import CoinC from './CoinC.vue';
 
 export default {
   name: 'HelloWorld',
@@ -73,21 +76,22 @@ export default {
   components: {
     NavBar,
     FooterC,
-    ThumbsUp
+    ThumbsUp,
+    CoinC
   },
 
   data() {
     return {
-      search: ''
+      search: ""
     }
   },
 
   computed: {
-    ...mapGetters(["techCrunch"]),
+    ...mapGetters(["bitcoinNews"]),
 
-    filteredTechCrunch() {
-      if (this.techCrunch) {
-        return this.techCrunch.filter((item) => {
+    filteredbitcoinNews() {
+      if (this.bitcoinNews) {
+        return this.bitcoinNews.filter((item) => {
           return item.title.toLowerCase().includes(this.search.toLowerCase());
         });
       } else {
@@ -97,17 +101,17 @@ export default {
   },
 
   methods: {
-    ...mapActions(["fetchTechCrunch"])
+    ...mapActions(["fetchBitcoinNews"])
   },
 
   async created() {
-    this.fetchTechCrunch()
+    this.fetchBitcoinNews()
   }
 }
 </script>
 
 <style scoped>
-#watcher{
+#watcher {
   /* border: #ffffff 2px solid; */
   /* border-radius: 20px; */
 }

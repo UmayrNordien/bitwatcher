@@ -78,7 +78,7 @@
           <div class="row">
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5>Address</h5>
+              <h5>Address <i class="bi bi-geo-alt"></i></h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
@@ -90,11 +90,12 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase"></h5>
+              <h5>Donate <i class="bi bi-coin"></i></h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white"></a>
+                  <a class="btn btn-sm btn-outline-warning me-2" href="https://github.com/example"><i class="bi bi-currency-bitcoin"></i></a>                
+                  <a class="btn btn-sm btn-outline-primary" href="https://github.com/example"><i class="bi bi-paypal"></i></a>                
                 </li>
               </ul>
             </div>
@@ -102,11 +103,11 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase"></h5>
+              <h5>Repository <i class="bi bi-memory"></i></h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white"></a>
+                  <a class="btn btn-sm btn-outline-success" href="https://github.com/example">Github <i class="bi bi-github"></i></a>                
                 </li>
               </ul>
             </div>
@@ -114,12 +115,12 @@
 
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase"></h5>
+              <h5>API <i class="bi bi-cloud"></i></h5>
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white"></a>
-                </li>
+                  <a class="btn btn-outline-danger me-2" href="https://example.com">Live <i class="bi bi-play-fill"></i></a>
+                  <a class="btn btn-sm btn-outline-success" href="https://github.com/example">Github <i class="bi bi-github"></i></a>                </li>
               </ul>
             </div>
             <!--Grid column-->

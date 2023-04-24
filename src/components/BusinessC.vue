@@ -13,9 +13,14 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredUSBusiness" :key="item">
         <article class="card">
-          <div class="temporary_text">
-            <img :src="item.urlToImage" :alt="item.title" class="news-image">          
-          </div>
+          <template v-if="item.urlToImage">
+            <div class="temporary_text">
+              <img :src="item.urlToImage" :alt="item.title" class="news-image">          
+            </div>
+          </template>
+          <template v-else>
+            <CoinC />
+          </template>
           <div class="card_wrapper">
             <div class="card_content">
               <span class="card_title">{{ item.title }}</span>
@@ -33,8 +38,12 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
+import CoinC from './CoinC.vue';
 
 export default {
+  components: {
+    CoinC,
+  },
   data() {
     return {
       search: ""

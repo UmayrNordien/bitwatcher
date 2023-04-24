@@ -3,29 +3,36 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     wsj: null,
-    techCrunch: null,
+    bitcoinNews: null,
     USBusiness: null,
+    allNews: null,
   },
   getters: {
     wsj(state){
       return state.wsj
     },
-    techCrunch(state){
-      return state.techCrunch
+    bitcoinNews(state){
+      return state.bitcoinNews
     },
     USBusiness(state){
       return state.USBusiness
+    },
+    allNews(state){
+      return state.allNews
     },
   },
   mutations: {
  setWSJ(state, wsj){
   state.wsj = wsj;
  },
- setTechCrunch(state, techCrunch){
-  state.techCrunch = techCrunch
+ setBitcoinNews(state, bitcoinNews){
+  state.bitcoinNews = bitcoinNews
  },
  setUSBusiness(state, USBusiness){
   state.USBusiness = USBusiness
+ },
+ setAllNews(state, allNews){
+  state.allNews = allNews
  },
   },
   actions: {
@@ -43,9 +50,16 @@ export default createStore({
     console.warn(err)
   })
  },
- fetchTechCrunch(content){
-  return fetch('http://localhost:3500/tech-crunch').then((response) => response.json()).then((techCrunch) => {
-    content.commit("setTechCrunch", techCrunch.articles)
+ fetchBitcoinNews(content){
+  return fetch('http://localhost:3500/bitcoin').then((response) => response.json()).then((bitcoinNews) => {
+    content.commit("setBitcoinNews", bitcoinNews.articles)
+  }).catch((err)=> {
+    console.warn(err)
+  })
+ },
+ fetchAllNews(content){
+  return fetch('http://localhost:3500/allnews').then((response) => response.json()).then((allNews) => {
+    content.commit("setAllNews", allNews.articles)
   }).catch((err)=> {
     console.warn(err)
   })

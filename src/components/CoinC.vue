@@ -8,11 +8,12 @@ export default {
 </script>
 <style scoped>
     .loader {
+      margin-top: 80px;
   transform: translateZ(1px);
 }
 
 .loader:after {
-  content: '$';
+  content: '₿';
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -21,8 +22,8 @@ export default {
   line-height: 40px;
   font-size: 32px;
   font-weight: bold;
-  background: #FFD700;
-  color: #DAA520;
+  background: #f9c317;
+  color: #aa8611;
   border: 4px double;
   box-sizing: border-box;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .1);
