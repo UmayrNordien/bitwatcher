@@ -19,9 +19,10 @@
             <li class="nav-item">
               <router-link to="/business" class="nav-link"><i class="bi bi-briefcase"></i> Business</router-link>
             </li>
-            <li class="nav-item">
+            <!--General article was giving problems so i removed it-->
+            <!-- <li class="nav-item">
               <router-link to="/general" class="nav-link"><i class="bi bi-globe"></i> General</router-link>
-            </li>
+            </li> -->
             <li class="nav-item">
               <router-link to="/contact" class="nav-link"><i class="bi bi-phone"></i> Contact</router-link>
             </li>
