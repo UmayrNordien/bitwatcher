@@ -7,7 +7,7 @@
         <!-- Section: Social media -->
         <section class="mb-4">
           <!-- Facebook -->
-          <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"><i class="bi bi-facebook"></i></a>
+          <a class="btn btn-outline-warning btn-floating m-1" href="https://www.facebook.com/people/Umayr-Nordien/pfbid0bRHLJYSxeWBxPTmKYbUbTqpj3m83RDM1v5FBtwLRisddoGpiDSKMTP3jUQCVjRqVl/" role="button"><i class="bi bi-facebook"></i></a>
 
           <!-- Twitter -->
           <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"><i class="bi bi-twitter"></i></a>
@@ -16,10 +16,10 @@
           <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"><i class="bi bi-google"></i></a>
 
           <!-- Instagram -->
-          <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+          <a class="btn btn-outline-warning btn-floating m-1" href="https://github.com/UmayrNordien" role="button"><i class="bi bi-instagram"></i></a>
 
           <!-- Linkedin -->
-          <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"><i class="bi bi-linkedin"></i></a>
+          <a class="btn btn-outline-warning btn-floating m-1" href="https://www.facebook.com/people/Umayr-Nordien/pfbid0bRHLJYSxeWBxPTmKYbUbTqpj3m83RDM1v5FBtwLRisddoGpiDSKMTP3jUQCVjRqVl/" role="button"><i class="bi bi-linkedin"></i></a>
 
           <!-- Github -->
           <a class="btn btn-outline-warning btn-floating m-1" href="#!" role="button"><i class="bi bi-github"></i></a>
@@ -34,7 +34,7 @@
               <!--Grid column-->
               <div class="col-auto">
                 <p class="pt-2">
-                  Stay Notified <i class="bi bi-envelope"></i>
+                  <a class="btn btn-sm btn-outline-warning">Stay Notified <i class="bi bi-envelope"></i></a>                
                   <!-- <strong>Sign up for our newsletter</strong> -->
                 </p>
               </div>
@@ -82,7 +82,9 @@
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a href="#!" class="text-white">LC Studio: 314 Iman Haron Rd Cape Town 7780</a>
+                  <a href="https://lifechoices.co.za/" class="text-white me-2">LC Studio: 314 Iman Haron Rd Cape Town 7780</a>
+                  <a class="btn btn-sm btn-outline-primary" href="https://lifechoices.co.za/"><i class="bi bi-link"></i></a>                
+
                 </li>
               </ul>
             </div>
@@ -94,8 +96,8 @@
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a class="btn btn-sm btn-outline-warning me-2" href="https://github.com/example"><i class="bi bi-currency-bitcoin"></i></a>                
-                  <a class="btn btn-sm btn-outline-primary" href="https://github.com/example"><i class="bi bi-paypal"></i></a>                
+                  <a class="btn btn-sm btn-outline-warning me-2" href="https://www.paypal.com/paypalme/umayrnordien"><i class="bi bi-currency-bitcoin"></i></a>                
+                  <a class="btn btn-sm btn-outline-primary" href="https://www.paypal.com/paypalme/umayrnordien"><i class="bi bi-paypal"></i></a>                
                 </li>
               </ul>
             </div>
@@ -107,7 +109,7 @@
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a class="btn btn-sm btn-outline-success" href="https://github.com/example">Github <i class="bi bi-github"></i></a>                
+                  <a class="btn btn-sm btn-outline-success" href="https://github.com/UmayrNordien/bitwatcher.git">Github <i class="bi bi-github"></i></a>                
                 </li>
               </ul>
             </div>
@@ -119,8 +121,8 @@
 
               <ul class="list-unstyled mb-0">
                 <li>
-                  <a class="btn btn-outline-danger me-2" href="https://example.com">Live <i class="bi bi-play-fill"></i></a>
-                  <a class="btn btn-sm btn-outline-success" href="https://github.com/example">Github <i class="bi bi-github"></i></a>                </li>
+                  <a class="btn btn-outline-danger me-2" href="https://bitwatcherapi-final.onrender.com">Live <i class="bi bi-play-fill"></i></a>
+                  <a class="btn btn-sm btn-outline-success" href="https://github.com/UmayrNordien/bitwatcherAPI_final.git">Github <i class="bi bi-github"></i></a>                </li>
               </ul>
             </div>
             <!--Grid column-->
@@ -166,5 +168,16 @@ footer {
   opacity: 1;
   background-image: radial-gradient(#141414 1.4500000000000002px, #252525 1.4500000000000002px);
   background-size: 29px 29px;
+}
+
+input::placeholder {
+  color: #f9c317;
+  text-align: center;
+}
+
+input:focus {
+  outline: 2px dashed #f9c317;
+  outline-offset: 2px;
+  /* Adjust the distance between the outline and the input element */
 }
 </style>

@@ -11,29 +11,26 @@
 
   <div class="container mt-5">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredallNews" :key="item">
-        <template v-if="item.urlToImage">
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-5" v-for="item in filteredallNews" :key="item">
           <article class="card">
-            <div class="temporary_text">
-              <img :src="item.urlToImage" :alt="item.title" class="news-image">          
+            <div class="temporary_text" v-if="item.urlToImage">
+              <img :src="item.urlToImage" :alt="item.title" class="news-image">
             </div>
+            <CoinC v-else></CoinC>
             <div class="card_wrapper">
               <div class="card_content">
                 <span class="card_title">{{ item.title }}</span>
                 <span class="card_subtitle">{{ item.description }}</span>
                 <p class="card_description">Author : {{ item.author }}</p>
                 <p class="card_description">{{ item.publishedAt }}</p>
-                <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More</a>
+                <a :href="item.url" target="_blank" class="btn btn-outline-warning">Read More <i
+                    class="bi bi-book"></i></a>
                 <ThumbsUp></ThumbsUp>
               </div>
             </div>
           </article>
-        </template>
-        <template v-else>
-          <CoinC></CoinC>
-        </template>
+        </div>
       </div>
-    </div>
   </div>
 </template>
 
