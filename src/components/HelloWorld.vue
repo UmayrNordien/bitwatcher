@@ -112,11 +112,6 @@ export default {
 
 <style scoped>
 #watcher {
-  /* border: #ffffff 2px solid; */
-  /* border-radius: 20px; */
-}
-
-#watcher {
   border-radius: 20px;
   max-width: 90%;
   height: auto;
